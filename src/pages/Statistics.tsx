@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { TrendingUp, TrendingDown, Receipt } from 'lucide-react';
 import { Charts } from '@/components/statistics/Charts';
 import { BrotherStatsCard } from '@/components/statistics/BrotherStatsCard';

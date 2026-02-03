@@ -7,11 +7,9 @@ import { TransactionList } from '@/components/transactions/TransactionList';
 import { AddIncomeForm } from '@/components/forms/AddIncomeForm';
 import { AddOutcomeForm } from '@/components/forms/AddOutcomeForm';
 import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { useBalance } from '@/hooks/useBalance';
 import { useStatistics } from '@/hooks/useStatistics';
 import { useTransactions } from '@/hooks/useTransactions';
-import { useBrothers } from '@/hooks/useBrothers';
 
 export function Dashboard() {
   const { balance, loading: balanceLoading, refetch: refetchBalance } = useBalance();
@@ -19,7 +17,6 @@ export function Dashboard() {
   const { transactions, loading: transactionsLoading, refetch: refetchTransactions } = useTransactions({
     limit: 10,
   });
-  const { brothers } = useBrothers();
 
   const [incomeFormOpen, setIncomeFormOpen] = useState(false);
   const [outcomeFormOpen, setOutcomeFormOpen] = useState(false);

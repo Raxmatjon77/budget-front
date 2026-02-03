@@ -1,5 +1,5 @@
 import { ArrowUpCircle, ArrowDownCircle, Receipt } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Card, CardContent } from '@/components/ui/Card';
 import { formatCurrency } from '@/utils/format';
 import type { Statistics } from '@/types';
 

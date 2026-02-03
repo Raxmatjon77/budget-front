@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Wallet, LayoutDashboard, Receipt, TrendingUp, List } from 'lucide-react';
+import { Wallet, LayoutDashboard, TrendingUp, List } from 'lucide-react';
 import { cn } from '@/utils/format';
 
 const navItems = [

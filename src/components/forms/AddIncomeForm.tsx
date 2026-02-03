@@ -18,7 +18,7 @@ export function AddIncomeForm({ isOpen, onClose, onSuccess }: AddIncomeFormProps
   const { brothers } = useBrothers();
   const { createIncome, loading, error } = useIncome();
 
-  const [brotherId, setBrotherId] = useState<number>('');
+  const [brotherId, setBrotherId] = useState<string>('');
   const [amount, setAmount] = useState('');
   const [description, setDescription] = useState('');
 
@@ -35,7 +35,7 @@ export function AddIncomeForm({ isOpen, onClose, onSuccess }: AddIncomeFormProps
 
     if (result) {
       // Reset form
-      setBrotherId(Number(''));
+      setBrotherId('');
       setAmount('');
       setDescription('');
       onClose();
@@ -60,7 +60,7 @@ export function AddIncomeForm({ isOpen, onClose, onSuccess }: AddIncomeFormProps
         <Select
           label="Brother"
           value={brotherId}
-          onChange={(e) => setBrotherId(Number(e.target.value))}
+          onChange={(e) => setBrotherId(e.target.value)}
           options={brotherOptions}
           required
         />

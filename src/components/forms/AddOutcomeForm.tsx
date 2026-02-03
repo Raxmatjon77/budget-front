@@ -86,11 +86,6 @@ export function AddOutcomeForm({ isOpen, onClose, onSuccess }: AddOutcomeFormPro
   const isValidPercentage = Math.abs(totalPercentage - 100) < 0.01;
   const totalAmountCents = parseFloat(totalAmount) * 100 || 0;
 
-  const brotherOptions = brothers.map((b: Brother) => ({
-    value: b.id,
-    label: b.name,
-  }));
-
   const createdByOptions = [
     { value: '', label: 'Select Payer' },
     ...brothers.map((b: Brother) => ({

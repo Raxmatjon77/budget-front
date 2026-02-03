@@ -143,7 +143,7 @@ export function Charts({ monthlySummary, perBrother }: ChartsProps) {
                 outerRadius={80}
                 dataKey="value"
               >
-                {outcomeShareData.map((entry, index) => (
+                {outcomeShareData.map((_entry, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={COLORS[index % COLORS.length]}
