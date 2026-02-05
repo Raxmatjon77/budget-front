@@ -43,10 +43,13 @@ export function AddIncomeForm({ isOpen, onClose, onSuccess }: AddIncomeFormProps
     }
   };
 
-  const brotherOptions = brothers.map((b: Brother) => ({
-    value: b.id,
-    label: b.name,
-  }));
+  const brotherOptions = [
+    { value: '', label: 'Select a brother' },
+    ...brothers.map((b: Brother) => ({
+      value: b.id,
+      label: b.name,
+    })),
+  ];
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Add Income" size="md">
